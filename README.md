@@ -1,9 +1,9 @@
 # A-Simple-Heuristic-based-PT-algorithm
 
 ## Getting Started
-This is the source code to reproduce the results stated at my Interspeech 2017 conference paper
+This is the source code to reproduce the results stated at my Interspeech 2017 conference paper.
 
-Kin Wah Edward Lin, Hans Anderson, Clifford So, Simon Lui.
+Kin Wah Edward Lin, Hans Anderson, Clifford So, Simon Lui. (2017)
 "Sinusoidal Partials Tracking for Singing Analysis Using the Heuristic of the Minimal Frequency and Magnitude Difference"
 The 18th Annual Conference of the International Speech Communication Association (Interspeech), Stockholm, Sweden. 
 
