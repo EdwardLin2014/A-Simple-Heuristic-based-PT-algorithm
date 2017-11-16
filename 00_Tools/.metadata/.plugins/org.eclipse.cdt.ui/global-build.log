@@ -1,0 +1,929 @@
+02:30:04 **** Build of configuration Debug for project svmtrain ****
+make all 
+Building file: ../svm.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm.d" "../svm.cu"
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm.o" "../svm.cu"
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+Finished building: ../svm.cu
+ 
+Building file: ../svm_model_matlab.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm_model_matlab.d" "../svm_model_matlab.cu"
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm_model_matlab.o" "../svm_model_matlab.cu"
+Finished building: ../svm_model_matlab.cu
+ 
+Building file: ../svmtrain.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svmtrain.d" "../svmtrain.cu"
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svmtrain.o" "../svmtrain.cu"
+Finished building: ../svmtrain.cu
+ 
+Building target: svmtrain.mexmaci64
+Invoking: NVCC Linker
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64 -link -o  "svmtrain.mexmaci64"  ./svm.o ./svm_model_matlab.o ./svmtrain.o    --device-link
+nvlink warning : Stack size for entry function '_Z13svm_train_gpuPK11svm_problemPK13svm_parameterP9svm_model' cannot be statically determined
+warning: no debug symbols in executable (-arch x86_64)
+Finished building target: svmtrain.mexmaci64
+ 
+02:30:30 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+02:34:05 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+02:41:12 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+02:41:56 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+02:42:43 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+02:43:11 **** Clean-only build of configuration Debug for project svmtrain ****
+make clean 
+rm -rf  ./svm.o ./svm_model_matlab.o ./svmtrain.o  ./svm.d ./svm_model_matlab.d ./svmtrain.d  svmtrain.mexmaci64
+ 
+02:43:20 **** Build of configuration Debug for project svmtrain ****
+make all 
+Building file: ../svm.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm.d" "../svm.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029dc_00000000-4_svm.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029dc_00000000-6_svm.cpp4.ii" 
+#$ -- Filter Dependencies -- > svm.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm.o" "../svm.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-7_svm.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000029e5_00000000-4_svm.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000029e5_00000000-4_svm.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-4_svm.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-3_svm.module_id" --include_file_name "tmpxft_000029e5_00000000-2_svm.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-7_svm.cpp1.ii" 
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-5_svm.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000029e5_00000000-4_svm.cudafe1.cpp" --stub_file_name "tmpxft_000029e5_00000000-4_svm.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-3_svm.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-5_svm.cpp4.ii" 
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-4_svm.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-9_svm.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000029e5_00000000-10_svm.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000029e5_00000000-10_svm.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-10_svm.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-3_svm.module_id" --include_file_name "tmpxft_000029e5_00000000-2_svm.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-9_svm.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-10_svm.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-11_svm.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svm.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-11_svm.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-6_svm.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-6_svm.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-12_svm.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-2_svm.fatbin" -64 --ident="../svm.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-12_svm.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-6_svm.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-2_svm.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-2_svm.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-4_svm.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-13_svm.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svm.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000029e5_00000000-13_svm.ii" 
+Finished building: ../svm.cu
+ 
+Building file: ../svm_model_matlab.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm_model_matlab.d" "../svm_model_matlab.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a11_00000000-4_svm_model_matlab.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a11_00000000-6_svm_model_matlab.cpp4.ii" 
+#$ -- Filter Dependencies -- > svm_model_matlab.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm_model_matlab.o" "../svm_model_matlab.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-7_svm_model_matlab.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002a1a_00000000-4_svm_model_matlab.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002a1a_00000000-4_svm_model_matlab.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-4_svm_model_matlab.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-3_svm_model_matlab.module_id" --include_file_name "tmpxft_00002a1a_00000000-2_svm_model_matlab.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-7_svm_model_matlab.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-5_svm_model_matlab.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002a1a_00000000-4_svm_model_matlab.cudafe1.cpp" --stub_file_name "tmpxft_00002a1a_00000000-4_svm_model_matlab.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-3_svm_model_matlab.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-5_svm_model_matlab.cpp4.ii" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-4_svm_model_matlab.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-9_svm_model_matlab.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002a1a_00000000-10_svm_model_matlab.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002a1a_00000000-10_svm_model_matlab.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-10_svm_model_matlab.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-3_svm_model_matlab.module_id" --include_file_name "tmpxft_00002a1a_00000000-2_svm_model_matlab.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-9_svm_model_matlab.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-10_svm_model_matlab.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-11_svm_model_matlab.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svm_model_matlab.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-11_svm_model_matlab.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-6_svm_model_matlab.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-6_svm_model_matlab.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-12_svm_model_matlab.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-2_svm_model_matlab.fatbin" -64 --ident="../svm_model_matlab.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-12_svm_model_matlab.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-6_svm_model_matlab.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-2_svm_model_matlab.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-2_svm_model_matlab.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-4_svm_model_matlab.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-13_svm_model_matlab.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svm_model_matlab.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a1a_00000000-13_svm_model_matlab.ii" 
+Finished building: ../svm_model_matlab.cu
+ 
+Building file: ../svmtrain.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svmtrain.d" "../svmtrain.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a46_00000000-4_svmtrain.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a46_00000000-6_svmtrain.cpp4.ii" 
+#$ -- Filter Dependencies -- > svmtrain.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svmtrain.o" "../svmtrain.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-7_svmtrain.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002a4f_00000000-4_svmtrain.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002a4f_00000000-4_svmtrain.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-4_svmtrain.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-3_svmtrain.module_id" --include_file_name "tmpxft_00002a4f_00000000-2_svmtrain.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-7_svmtrain.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-5_svmtrain.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002a4f_00000000-4_svmtrain.cudafe1.cpp" --stub_file_name "tmpxft_00002a4f_00000000-4_svmtrain.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-3_svmtrain.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-5_svmtrain.cpp4.ii" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-4_svmtrain.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-9_svmtrain.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002a4f_00000000-10_svmtrain.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002a4f_00000000-10_svmtrain.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-10_svmtrain.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-3_svmtrain.module_id" --include_file_name "tmpxft_00002a4f_00000000-2_svmtrain.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-9_svmtrain.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-10_svmtrain.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-11_svmtrain.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svmtrain.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-11_svmtrain.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-6_svmtrain.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-6_svmtrain.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-12_svmtrain.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-2_svmtrain.fatbin" -64 --ident="../svmtrain.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-12_svmtrain.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-6_svmtrain.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-2_svmtrain.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-2_svmtrain.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-4_svmtrain.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-13_svmtrain.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svmtrain.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002a4f_00000000-13_svmtrain.ii" 
+Finished building: ../svmtrain.cu
+ 
+Building target: svmtrain.mexmaci64
+Invoking: NVCC Linker
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64 -link -o  "svmtrain.mexmaci64"  ./svm.o ./svm_model_matlab.o ./svmtrain.o    --device-link
+nvlink warning : Stack size for entry function '_Z13svm_train_gpuPK11svm_problemPK13svm_parameterP9svm_model' cannot be statically determined
+warning: no debug symbols in executable (-arch x86_64)
+Finished building target: svmtrain.mexmaci64
+ 
+02:45:16 **** Clean-only build of configuration Debug for project svmtrain ****
+make clean 
+rm -rf  ./svm.o ./svm_model_matlab.o ./svmtrain.o  ./svm.d ./svm_model_matlab.d ./svmtrain.d  svmtrain.mexmaci64
+ 
+02:45:19 **** Build of configuration Debug for project svmtrain ****
+make all 
+Building file: ../svm.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm.d" "../svm.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002af7_00000000-4_svm.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002af7_00000000-6_svm.cpp4.ii" 
+#$ -- Filter Dependencies -- > svm.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm.o" "../svm.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-7_svm.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b00_00000000-4_svm.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b00_00000000-4_svm.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-4_svm.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-3_svm.module_id" --include_file_name "tmpxft_00002b00_00000000-2_svm.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-7_svm.cpp1.ii" 
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-5_svm.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b00_00000000-4_svm.cudafe1.cpp" --stub_file_name "tmpxft_00002b00_00000000-4_svm.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-3_svm.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-5_svm.cpp4.ii" 
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-4_svm.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-9_svm.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b00_00000000-10_svm.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b00_00000000-10_svm.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-10_svm.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-3_svm.module_id" --include_file_name "tmpxft_00002b00_00000000-2_svm.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-9_svm.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-10_svm.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-11_svm.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svm.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-11_svm.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-6_svm.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-6_svm.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-12_svm.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-2_svm.fatbin" -64 --ident="../svm.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-12_svm.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-6_svm.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-2_svm.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-2_svm.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-4_svm.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-13_svm.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svm.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b00_00000000-13_svm.ii" 
+Finished building: ../svm.cu
+ 
+Building file: ../svm_model_matlab.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm_model_matlab.d" "../svm_model_matlab.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b2c_00000000-4_svm_model_matlab.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b2c_00000000-6_svm_model_matlab.cpp4.ii" 
+#$ -- Filter Dependencies -- > svm_model_matlab.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm_model_matlab.o" "../svm_model_matlab.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-7_svm_model_matlab.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b35_00000000-4_svm_model_matlab.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b35_00000000-4_svm_model_matlab.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-4_svm_model_matlab.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-3_svm_model_matlab.module_id" --include_file_name "tmpxft_00002b35_00000000-2_svm_model_matlab.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-7_svm_model_matlab.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-5_svm_model_matlab.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b35_00000000-4_svm_model_matlab.cudafe1.cpp" --stub_file_name "tmpxft_00002b35_00000000-4_svm_model_matlab.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-3_svm_model_matlab.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-5_svm_model_matlab.cpp4.ii" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-4_svm_model_matlab.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-9_svm_model_matlab.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b35_00000000-10_svm_model_matlab.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b35_00000000-10_svm_model_matlab.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-10_svm_model_matlab.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-3_svm_model_matlab.module_id" --include_file_name "tmpxft_00002b35_00000000-2_svm_model_matlab.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-9_svm_model_matlab.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-10_svm_model_matlab.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-11_svm_model_matlab.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svm_model_matlab.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-11_svm_model_matlab.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-6_svm_model_matlab.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-6_svm_model_matlab.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-12_svm_model_matlab.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-2_svm_model_matlab.fatbin" -64 --ident="../svm_model_matlab.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-12_svm_model_matlab.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-6_svm_model_matlab.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-2_svm_model_matlab.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-2_svm_model_matlab.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-4_svm_model_matlab.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-13_svm_model_matlab.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svm_model_matlab.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b35_00000000-13_svm_model_matlab.ii" 
+Finished building: ../svm_model_matlab.cu
+ 
+Building file: ../svmtrain.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svmtrain.d" "../svmtrain.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b61_00000000-4_svmtrain.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b61_00000000-6_svmtrain.cpp4.ii" 
+#$ -- Filter Dependencies -- > svmtrain.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svmtrain.o" "../svmtrain.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-7_svmtrain.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b6a_00000000-4_svmtrain.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b6a_00000000-4_svmtrain.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-4_svmtrain.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-3_svmtrain.module_id" --include_file_name "tmpxft_00002b6a_00000000-2_svmtrain.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-7_svmtrain.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-5_svmtrain.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b6a_00000000-4_svmtrain.cudafe1.cpp" --stub_file_name "tmpxft_00002b6a_00000000-4_svmtrain.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-3_svmtrain.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-5_svmtrain.cpp4.ii" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-4_svmtrain.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-9_svmtrain.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b6a_00000000-10_svmtrain.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00002b6a_00000000-10_svmtrain.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-10_svmtrain.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-3_svmtrain.module_id" --include_file_name "tmpxft_00002b6a_00000000-2_svmtrain.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-9_svmtrain.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-10_svmtrain.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-11_svmtrain.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svmtrain.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-11_svmtrain.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-6_svmtrain.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-6_svmtrain.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-12_svmtrain.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-2_svmtrain.fatbin" -64 --ident="../svmtrain.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-12_svmtrain.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-6_svmtrain.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-2_svmtrain.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-2_svmtrain.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-4_svmtrain.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-13_svmtrain.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svmtrain.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00002b6a_00000000-13_svmtrain.ii" 
+Finished building: ../svmtrain.cu
+ 
+Building target: svmtrain.mexmaci64
+Invoking: NVCC Linker
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64 -link -o  "svmtrain.mexmaci64"  ./svm.o ./svm_model_matlab.o ./svmtrain.o    --device-link
+nvlink warning : Stack size for entry function '_Z13svm_train_gpuPK11svm_problemPK13svm_parameterP9svm_model' cannot be statically determined
+warning: no debug symbols in executable (-arch x86_64)
+Finished building target: svmtrain.mexmaci64
+ 
+03:14:29 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+12:44:04 **** Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+12:45:26 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+12:46:17 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+12:50:49 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+12:51:57 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+12:53:39 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+12:54:55 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+12:55:18 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:00:49 **** Clean-only build of configuration Debug for project svmtrain ****
+make clean 
+rm -rf  ./svm.o ./svm_model_matlab.o ./svmtrain.o  ./svm.d ./svm_model_matlab.d ./svmtrain.d  svmtrain.mexmaci64
+ 
+13:00:55 **** Build of configuration Debug for project svmtrain ****
+make all 
+Building file: ../svm.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm.d" "../svm.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003bd_00000000-4_svm.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003bd_00000000-6_svm.cpp4.ii" 
+#$ -- Filter Dependencies -- > svm.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm.o" "../svm.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-7_svm.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000003c6_00000000-4_svm.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000003c6_00000000-4_svm.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-4_svm.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-3_svm.module_id" --include_file_name "tmpxft_000003c6_00000000-2_svm.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-7_svm.cpp1.ii" 
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-5_svm.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000003c6_00000000-4_svm.cudafe1.cpp" --stub_file_name "tmpxft_000003c6_00000000-4_svm.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-3_svm.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-5_svm.cpp4.ii" 
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-4_svm.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-9_svm.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000003c6_00000000-10_svm.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000003c6_00000000-10_svm.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-10_svm.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-3_svm.module_id" --include_file_name "tmpxft_000003c6_00000000-2_svm.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-9_svm.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-10_svm.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-11_svm.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svm.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-11_svm.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-6_svm.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-6_svm.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-12_svm.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-2_svm.fatbin" -64 --ident="../svm.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-12_svm.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-6_svm.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-2_svm.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-2_svm.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-4_svm.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-13_svm.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svm.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003c6_00000000-13_svm.ii" 
+Finished building: ../svm.cu
+ 
+Building file: ../svm_model_matlab.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm_model_matlab.d" "../svm_model_matlab.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003f3_00000000-4_svm_model_matlab.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003f3_00000000-6_svm_model_matlab.cpp4.ii" 
+#$ -- Filter Dependencies -- > svm_model_matlab.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm_model_matlab.o" "../svm_model_matlab.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-7_svm_model_matlab.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000003fc_00000000-4_svm_model_matlab.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000003fc_00000000-4_svm_model_matlab.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-4_svm_model_matlab.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-3_svm_model_matlab.module_id" --include_file_name "tmpxft_000003fc_00000000-2_svm_model_matlab.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-7_svm_model_matlab.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-5_svm_model_matlab.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000003fc_00000000-4_svm_model_matlab.cudafe1.cpp" --stub_file_name "tmpxft_000003fc_00000000-4_svm_model_matlab.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-3_svm_model_matlab.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-5_svm_model_matlab.cpp4.ii" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-4_svm_model_matlab.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-9_svm_model_matlab.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000003fc_00000000-10_svm_model_matlab.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000003fc_00000000-10_svm_model_matlab.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-10_svm_model_matlab.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-3_svm_model_matlab.module_id" --include_file_name "tmpxft_000003fc_00000000-2_svm_model_matlab.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-9_svm_model_matlab.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-10_svm_model_matlab.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-11_svm_model_matlab.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svm_model_matlab.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-11_svm_model_matlab.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-6_svm_model_matlab.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-6_svm_model_matlab.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-12_svm_model_matlab.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-2_svm_model_matlab.fatbin" -64 --ident="../svm_model_matlab.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-12_svm_model_matlab.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-6_svm_model_matlab.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-2_svm_model_matlab.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-2_svm_model_matlab.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-4_svm_model_matlab.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-13_svm_model_matlab.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svm_model_matlab.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000003fc_00000000-13_svm_model_matlab.ii" 
+Finished building: ../svm_model_matlab.cu
+ 
+Building file: ../svmtrain.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svmtrain.d" "../svmtrain.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000428_00000000-4_svmtrain.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000428_00000000-6_svmtrain.cpp4.ii" 
+#$ -- Filter Dependencies -- > svmtrain.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svmtrain.o" "../svmtrain.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-7_svmtrain.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00000431_00000000-4_svmtrain.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00000431_00000000-4_svmtrain.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-4_svmtrain.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-3_svmtrain.module_id" --include_file_name "tmpxft_00000431_00000000-2_svmtrain.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-7_svmtrain.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-5_svmtrain.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00000431_00000000-4_svmtrain.cudafe1.cpp" --stub_file_name "tmpxft_00000431_00000000-4_svmtrain.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-3_svmtrain.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-5_svmtrain.cpp4.ii" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-4_svmtrain.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-9_svmtrain.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00000431_00000000-10_svmtrain.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00000431_00000000-10_svmtrain.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-10_svmtrain.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-3_svmtrain.module_id" --include_file_name "tmpxft_00000431_00000000-2_svmtrain.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-9_svmtrain.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-10_svmtrain.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-11_svmtrain.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svmtrain.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-11_svmtrain.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-6_svmtrain.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-6_svmtrain.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-12_svmtrain.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-2_svmtrain.fatbin" -64 --ident="../svmtrain.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-12_svmtrain.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-6_svmtrain.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-2_svmtrain.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-2_svmtrain.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-4_svmtrain.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-13_svmtrain.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svmtrain.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000431_00000000-13_svmtrain.ii" 
+Finished building: ../svmtrain.cu
+ 
+Building target: svmtrain.mexmaci64
+Invoking: NVCC Linker
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64 -link -o  "svmtrain.mexmaci64"  ./svm.o ./svm_model_matlab.o ./svmtrain.o    --device-link
+nvlink warning : Stack size for entry function '_Z13svm_train_gpuPK11svm_problemPK13svm_parameterP9svm_model' cannot be statically determined
+warning: no debug symbols in executable (-arch x86_64)
+Finished building target: svmtrain.mexmaci64
+ 
+13:02:30 **** Clean-only build of configuration Debug for project svmtrain ****
+make clean 
+rm -rf  ./svm.o ./svm_model_matlab.o ./svmtrain.o  ./svm.d ./svm_model_matlab.d ./svmtrain.d  svmtrain.mexmaci64
+ 
+13:02:37 **** Build of configuration Debug for project svmtrain ****
+make all 
+Building file: ../svm.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm.d" "../svm.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004b4_00000000-4_svm.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004b4_00000000-6_svm.cpp4.ii" 
+#$ -- Filter Dependencies -- > svm.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm.o" "../svm.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-7_svm.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000004bd_00000000-4_svm.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000004bd_00000000-4_svm.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-4_svm.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-3_svm.module_id" --include_file_name "tmpxft_000004bd_00000000-2_svm.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-7_svm.cpp1.ii" 
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-5_svm.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000004bd_00000000-4_svm.cudafe1.cpp" --stub_file_name "tmpxft_000004bd_00000000-4_svm.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-3_svm.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-5_svm.cpp4.ii" 
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-4_svm.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-9_svm.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000004bd_00000000-10_svm.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000004bd_00000000-10_svm.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-10_svm.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-3_svm.module_id" --include_file_name "tmpxft_000004bd_00000000-2_svm.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-9_svm.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-10_svm.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-11_svm.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svm.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-11_svm.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-6_svm.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-6_svm.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-12_svm.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-2_svm.fatbin" -64 --ident="../svm.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-12_svm.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-6_svm.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-2_svm.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-2_svm.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-4_svm.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-13_svm.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svm.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004bd_00000000-13_svm.ii" 
+Finished building: ../svm.cu
+ 
+Building file: ../svm_model_matlab.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm_model_matlab.d" "../svm_model_matlab.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004ea_00000000-4_svm_model_matlab.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004ea_00000000-6_svm_model_matlab.cpp4.ii" 
+#$ -- Filter Dependencies -- > svm_model_matlab.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm_model_matlab.o" "../svm_model_matlab.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-7_svm_model_matlab.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000004f3_00000000-4_svm_model_matlab.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000004f3_00000000-4_svm_model_matlab.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-4_svm_model_matlab.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-3_svm_model_matlab.module_id" --include_file_name "tmpxft_000004f3_00000000-2_svm_model_matlab.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-7_svm_model_matlab.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svm_model_matlab.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-5_svm_model_matlab.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000004f3_00000000-4_svm_model_matlab.cudafe1.cpp" --stub_file_name "tmpxft_000004f3_00000000-4_svm_model_matlab.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-3_svm_model_matlab.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-5_svm_model_matlab.cpp4.ii" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-4_svm_model_matlab.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-9_svm_model_matlab.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000004f3_00000000-10_svm_model_matlab.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_000004f3_00000000-10_svm_model_matlab.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-10_svm_model_matlab.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-3_svm_model_matlab.module_id" --include_file_name "tmpxft_000004f3_00000000-2_svm_model_matlab.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-9_svm_model_matlab.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-10_svm_model_matlab.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-11_svm_model_matlab.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svm_model_matlab.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-11_svm_model_matlab.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-6_svm_model_matlab.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-6_svm_model_matlab.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-12_svm_model_matlab.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-2_svm_model_matlab.fatbin" -64 --ident="../svm_model_matlab.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-12_svm_model_matlab.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-6_svm_model_matlab.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-2_svm_model_matlab.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-2_svm_model_matlab.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-4_svm_model_matlab.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-13_svm_model_matlab.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svm_model_matlab.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_000004f3_00000000-13_svm_model_matlab.ii" 
+Finished building: ../svm_model_matlab.cu
+ 
+Building file: ../svmtrain.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svmtrain.d" "../svmtrain.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_0000051f_00000000-4_svmtrain.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_0000051f_00000000-6_svmtrain.cpp4.ii" 
+#$ -- Filter Dependencies -- > svmtrain.d
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -v -Xcompiler -fPIC -std=c++11 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svmtrain.o" "../svmtrain.cu"
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _THERE_=/Developer/NVIDIA/CUDA-8.0/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/Developer/NVIDIA/CUDA-8.0/bin/..
+#$ NVVMIR_LIBRARY_DIR=/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice
+#$ PATH=/Developer/NVIDIA/CUDA-8.0/bin/../open64/bin:/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/bin:/Developer/NVIDIA/CUDA-8.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Developer/NVIDIA/CUDA-8.0/bin
+#$ INCLUDES="-I/Developer/NVIDIA/CUDA-8.0/bin/../include"  
+#$ LIBRARIES=  "-L/Developer/NVIDIA/CUDA-8.0/bin/../lib"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-7_svmtrain.cpp1.ii" 
+#$ cudafe --clang --allow_managed --m64 --clang_version=30800 --c++11 -tused --no_remove_unneeded_entities --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00000528_00000000-4_svmtrain.cudafe1.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00000528_00000000-4_svmtrain.cudafe1.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-4_svmtrain.cudafe1.gpu" --nv_arch "compute_52" --gen_module_id_file --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-3_svmtrain.module_id" --include_file_name "tmpxft_00000528_00000000-2_svmtrain.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-7_svmtrain.cpp1.ii" 
+#$ clang -std=c++11 -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__  -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -D"__CUDACC_VER__=80061" -D"__CUDACC_VER_BUILD__=61" -D"__CUDACC_VER_MINOR__=0" -D"__CUDACC_VER_MAJOR__=8" -include "cuda_runtime.h" -m64 -g "../svmtrain.cu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-5_svmtrain.cpp4.ii" 
+#$ cudafe++ --clang --allow_managed --m64 --clang_version=30800 --c++11 --parse_templates --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00000528_00000000-4_svmtrain.cudafe1.cpp" --stub_file_name "tmpxft_00000528_00000000-4_svmtrain.cudafe1.stub.c" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-3_svmtrain.module_id" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-5_svmtrain.cpp4.ii" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDACC__ -D__NVCC__ -D__CUDACC_RDC__ -D__CUDANVVM__  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-4_svmtrain.cudafe1.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-9_svmtrain.cpp2.i" 
+#$ cudafe -w --clang --allow_managed --m64 --clang_version=30800 --c --debug_mode  --device-c --gen_c_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00000528_00000000-10_svmtrain.cudafe2.c" --stub_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T/tmpxft_00000528_00000000-10_svmtrain.cudafe2.stub.c" --gen_device_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-10_svmtrain.cudafe2.gpu" --nv_arch "compute_52" --module_id_file_name "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-3_svmtrain.module_id" --include_file_name "tmpxft_00000528_00000000-2_svmtrain.fatbin.c" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-9_svmtrain.cpp2.i" 
+#$ clang -D__CUDA_ARCH__=520 -E -x c     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__CUDABE__ -D__CUDANVVM__ -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-10_svmtrain.cudafe2.gpu" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-11_svmtrain.cpp3.i" 
+#$ cicc  -arch compute_52 -m64 -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 -g -O0 -nvvmir-library "/Developer/NVIDIA/CUDA-8.0/bin/../nvvm/libdevice/libdevice.compute_50.10.bc"  --device-c --orig_src_file_name "../svmtrain.cu"  "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-11_svmtrain.cpp3.i" -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-6_svmtrain.ptx"
+#$ ptxas  -arch=sm_52 -m64 --compile-only  -g --dont-merge-basicblocks --return-at-end "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-6_svmtrain.ptx"  -o "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-12_svmtrain.sm_52.cubin" 
+#$ fatbinary --create="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-2_svmtrain.fatbin" -64 --ident="../svmtrain.cu" --cmdline="--compile-only  -g --dont-merge-basicblocks --return-at-end " -g "--image=profile=sm_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-12_svmtrain.sm_52.cubin" "--image=profile=compute_52,file=/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-6_svmtrain.ptx" --embedded-fatbin="/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-2_svmtrain.fatbin.c" --cuda --device-c
+#$ rm /var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-2_svmtrain.fatbin
+#$ clang -std=c++11 -D__CUDA_ARCH__=520 -E -x c++     -DCUDA_DOUBLE_MATH_FUNCTIONS  -D__USE_FAST_MATH__=0  -fPIC -D__CUDA_FTZ=0 -D__CUDA_PREC_DIV=1 -D__CUDA_PREC_SQRT=1 -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-4_svmtrain.cudafe1.cpp" > "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-13_svmtrain.ii" 
+#$ clang -std=c++11 -c -x c++ -fPIC -I"/Applications/MATLAB_R2016a.app/extern/include" -I"/Applications/MATLAB_R2016a.app/simulink/include" -I"/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/" "-I/Developer/NVIDIA/CUDA-8.0/bin/../include"   -m64 -g -o "svmtrain.o" "/var/folders/3v/kbmktdgj13v8v90x8qw_16w40000gn/T//tmpxft_00000528_00000000-13_svmtrain.ii" 
+Finished building: ../svmtrain.cu
+ 
+Building target: svmtrain.mexmaci64
+Invoking: NVCC Linker
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64 -link -o  "svmtrain.mexmaci64"  ./svm.o ./svm_model_matlab.o ./svmtrain.o    --device-link
+nvlink warning : Stack size for entry function '_Z13svm_train_gpuPK11svm_problemPK13svm_parameterP9svm_model' cannot be statically determined
+warning: no debug symbols in executable (-arch x86_64)
+Finished building target: svmtrain.mexmaci64
+ 
+13:04:40 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:05:14 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:11:27 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:11:56 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:13:01 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:13:31 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:17:15 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:21:43 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:22:26 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:23:09 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:23:34 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:23:55 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:24:13 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:25:08 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:25:09 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:25:52 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:25:53 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:26:31 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:26:52 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:26:59 **** Incremental Build of configuration Debug for project svmtrain ****
+make all 
+make: Nothing to be done for `all'.
+13:28:36 **** Clean-only build of configuration Debug for project svmtrain ****
+make clean 
+rm -rf  ./svm.o ./svm_model_matlab.o ./svmtrain.o  ./svm.d ./svm_model_matlab.d ./svmtrain.d  svmtrain.mexmaci64
+ 
+13:28:41 **** Build of configuration Debug for project svmtrain ****
+make all 
+make: *** No rule to make target `svmtrain.mexmaci64', needed by `all'.  Stop.
+13:31:06 **** Clean-only build of configuration Debug for project svmtrain ****
+make clean 
+rm -rf  USER_OBJS  ./svm.o ./svm_model_matlab.o ./svmtrain.o  ./svm.d ./svm_model_matlab.d ./svmtrain.d  svmtrain.mexmaci64
+ 
+13:32:54 **** Clean-only build of configuration Debug for project svmtrain ****
+make clean 
+rm -rf  USER_OBJS  ./svm.o ./svm_model_matlab.o ./svmtrain.o  ./svm.d ./svm_model_matlab.d ./svmtrain.d  svmtrain.mexmaci64
+ 
+13:33:46 **** Clean-only build of configuration Debug for project svmtrain ****
+make clean 
+rm -rf  USER_OBJS  ./svm.o ./svm_model_matlab.o ./svmtrain.o  ./svm.d ./svm_model_matlab.d ./svmtrain.d  svmtrain.mexmaci64
+ 
+13:34:34 **** Build of configuration Debug for project svmtrain ****
+make all 
+Building file: ../svm.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm.d" "../svm.cu"
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm.o" "../svm.cu"
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+Finished building: ../svm.cu
+ 
+Building file: ../svm_model_matlab.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm_model_matlab.d" "../svm_model_matlab.cu"
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm_model_matlab.o" "../svm_model_matlab.cu"
+Finished building: ../svm_model_matlab.cu
+ 
+Building file: ../svmtrain.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svmtrain.d" "../svmtrain.cu"
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svmtrain.o" "../svmtrain.cu"
+Finished building: ../svmtrain.cu
+ 
+Building target: svmtrain.mexmaci64
+Invoking: NVCC Linker
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64 -link -o  "svmtrain.mexmaci64"  ./svm.o ./svm_model_matlab.o ./svmtrain.o   
+nvlink warning : Stack size for entry function '_Z13svm_train_gpuPK11svm_problemPK13svm_parameterP9svm_model' cannot be statically determined
+Undefined symbols for architecture x86_64:
+  "_main", referenced from:
+     implicit entry/start for main executable
+  "_mexCallMATLABWithObject", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+  "_mexPrintf", referenced from:
+      print_string_matlab(char const*) in svmtrain.o
+      exit_with_help() in svmtrain.o
+      do_cross_validation() in svmtrain.o
+      parse_command_line(int, mxArray_tag const**, char*) in svmtrain.o
+      read_problem_dense(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+      ...
+  "_mxCreateDoubleMatrix_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      _mexFunction in svmtrain.o
+      fake_answer(int, mxArray_tag**) in svmtrain.o
+  "_mxCreateSparse_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+  "_mxCreateStructMatrix_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+  "_mxDestroyArray", referenced from:
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+  "_mxDuplicateArray", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+  "_mxFree", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+  "_mxGetFieldByNumber_730", referenced from:
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+  "_mxGetIr_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+  "_mxGetJc_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+  "_mxGetM", referenced from:
+      read_problem_dense(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+  "_mxGetN", referenced from:
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      parse_command_line(int, mxArray_tag const**, char*) in svmtrain.o
+      read_problem_dense(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+  "_mxGetNumberOfFields", referenced from:
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+  "_mxGetNzmax_730", referenced from:
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+  "_mxGetPr", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      read_problem_dense(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+  "_mxGetString_730", referenced from:
+      parse_command_line(int, mxArray_tag const**, char*) in svmtrain.o
+  "_mxIsDouble", referenced from:
+      _mexFunction in svmtrain.o
+  "_mxIsEmpty", referenced from:
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+  "_mxIsSparse", referenced from:
+      _mexFunction in svmtrain.o
+  "_mxMalloc", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+  "_mxSetField_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [svmtrain.mexmaci64] Error 1

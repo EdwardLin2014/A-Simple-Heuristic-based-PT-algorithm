@@ -1,0 +1,112 @@
+13:34:34 **** Build of configuration Debug for project svmtrain ****
+make all 
+Building file: ../svm.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm.d" "../svm.cu"
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm.o" "../svm.cu"
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+../svm.cu(74): warning: variable "svm_print_string" was set but never used
+
+Finished building: ../svm.cu
+ 
+Building file: ../svm_model_matlab.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svm_model_matlab.d" "../svm_model_matlab.cu"
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svm_model_matlab.o" "../svm_model_matlab.cu"
+Finished building: ../svm_model_matlab.cu
+ 
+Building file: ../svmtrain.cu
+Invoking: NVCC Compiler
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 -gencode arch=compute_52,code=sm_52 -m64 -odir "." -M -o "svmtrain.d" "../svmtrain.cu"
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc -I/Applications/MATLAB_R2016a.app/extern/include -I/Applications/MATLAB_R2016a.app/simulink/include -I/Applications/MATLAB_R2016a.app/toolbox/distcomp/gpu/extern/include/ -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64  -x cu -o  "svmtrain.o" "../svmtrain.cu"
+Finished building: ../svmtrain.cu
+ 
+Building target: svmtrain.mexmaci64
+Invoking: NVCC Linker
+/Developer/NVIDIA/CUDA-8.0/bin/nvcc --cudart static --relocatable-device-code=true -gencode arch=compute_52,code=compute_52 -gencode arch=compute_52,code=sm_52 -m64 -link -o  "svmtrain.mexmaci64"  ./svm.o ./svm_model_matlab.o ./svmtrain.o   
+nvlink warning : Stack size for entry function '_Z13svm_train_gpuPK11svm_problemPK13svm_parameterP9svm_model' cannot be statically determined
+Undefined symbols for architecture x86_64:
+  "_main", referenced from:
+     implicit entry/start for main executable
+  "_mexCallMATLABWithObject", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+  "_mexPrintf", referenced from:
+      print_string_matlab(char const*) in svmtrain.o
+      exit_with_help() in svmtrain.o
+      do_cross_validation() in svmtrain.o
+      parse_command_line(int, mxArray_tag const**, char*) in svmtrain.o
+      read_problem_dense(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+      ...
+  "_mxCreateDoubleMatrix_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      _mexFunction in svmtrain.o
+      fake_answer(int, mxArray_tag**) in svmtrain.o
+  "_mxCreateSparse_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+  "_mxCreateStructMatrix_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+  "_mxDestroyArray", referenced from:
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+  "_mxDuplicateArray", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+  "_mxFree", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+  "_mxGetFieldByNumber_730", referenced from:
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+  "_mxGetIr_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+  "_mxGetJc_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+  "_mxGetM", referenced from:
+      read_problem_dense(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+  "_mxGetN", referenced from:
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      parse_command_line(int, mxArray_tag const**, char*) in svmtrain.o
+      read_problem_dense(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+  "_mxGetNumberOfFields", referenced from:
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+  "_mxGetNzmax_730", referenced from:
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+  "_mxGetPr", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+      read_problem_dense(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      read_problem_sparse(mxArray_tag const*, mxArray_tag const*) in svmtrain.o
+      _mexFunction in svmtrain.o
+  "_mxGetString_730", referenced from:
+      parse_command_line(int, mxArray_tag const**, char*) in svmtrain.o
+  "_mxIsDouble", referenced from:
+      _mexFunction in svmtrain.o
+  "_mxIsEmpty", referenced from:
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+  "_mxIsSparse", referenced from:
+      _mexFunction in svmtrain.o
+  "_mxMalloc", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+      matlab_matrix_to_model(mxArray_tag const*, char const**) in svm_model_matlab.o
+  "_mxSetField_730", referenced from:
+      model_to_matlab_structure(mxArray_tag**, int, svm_model*) in svm_model_matlab.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [svmtrain.mexmaci64] Error 1
+
+13:34:40 Build Finished (took 5s.723ms)
+
