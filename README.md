@@ -9,7 +9,7 @@ The 18th Annual Conference of the International Speech Communication Association
 
 http://www.isca-speech.org/archive/Interspeech_2017/pdfs/0017.PDF
 
-## Prerequisites
+## Prerequisites for BSS Eval 3.0
 * The source code should be executed using GPU with at least 12GB memory , e.g. NVIDIA GeForce GTX TITAN X. 
 
 ### Dataset
